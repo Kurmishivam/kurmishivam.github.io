@@ -1,0 +1,49 @@
+
+    /* ----- BASIC PAGE SETTINGS ----- */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f7f7f7;
+    }
+
+    /* ----- NAVIGATION BAR ----- */
+    nav {
+        background: #333;
+        padding: 12px 0;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 35px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    nav ul li a:hover {
+        color: yellow;
+        transition: 0.3s;
+    }
+
+    /* ----- SECTIONS COMMON STYLE ----- */
+    section {
+        padding: 60px 20px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
