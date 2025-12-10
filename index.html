@@ -3,61 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet"href="style.css">
+    <title>Shivam - My Website</title>
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        body {
+            background: #f2f2f2;
+        }
+
+        /* NAVBAR */
+        nav {
+            width: 100%;
+            background: #000;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* 3 DOT MENU */
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        /* DROPDOWN MENU BOX */
+        .menu-box {
+            position: absolute;
+            right: 20px;
+            top: 60px;
+            background: #fff;
+            width: 150px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #aaa;
+            display: none;
+        }
+
+        .menu-box a {
+            display: block;
+            padding: 12px;
+            color: black;
+            text-decoration: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu-box a:hover {
+            background: #f5f5f5;
+        }
+
+        /* MAIN AREA */
+        .container {
+            width: 90%;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
-    <h1>SHIVAM KURMI</h1>
-    <nav class="navbar">
-    <div class="logo">My Website</div>
 
-    <!-- Hamburger icon -->
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <!-- NAVBAR -->
+    <nav>
+        <h2>Shivam</h2>
 
-    <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
+        <!-- MENU ICON (3 DOTS) -->
+        <div class="menu-icon" onclick="toggleMenu()">⋮</div>
+
+        <!-- MENU BOX -->
+        <div class="menu-box" id="menubox">
+            <a href="#">Home</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </div>
     </nav>
-        
-         <!-- update -->
-        <section id="about">
-
-        <h2>About Me</h2>
-        <p>My name is Shivam Kurmi. I am from Bhopal, Madhya Pradesh. 
-    I am learning HTML, CSS and Java. I want to become a software developer. 
-    I love creating websites and improving my skills</p>
-</section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTMl</li>
-            <li>CSS</li>
-            <li>Java</li>
-            <li>Problem solving</li>
-            <li>Communication Skills</li>
-        </ul>
-</section>
-        <section id="project">
-            <li>Portfolio Websites</li>
-            <li>Student Information Page</li>
-            <li>Simple Calculator</li>
 
 
-        </section>
+    <!-- MAIN CONTENT -->
+    <div class="container">
+        <h1>Welcome to Shivam's Website</h1>
+        <p>This is a complete HTML + CSS + JS website created in one single file.</p>
+        <p>You can edit the content as you like.</p>
+    </div>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Email : kurmishivam21@gmail.com</p>
-            <p>Phone : 8815706724</p>
-            <p>Location :Bhopal , Madhy Pradesh</p>
-        </section>
 
-        <footer>© 2025 Shivam | All Rights Reserved</footer>
+    <!-- JAVASCRIPT -->
+    <script>
+        function toggleMenu() {
+            let menu = document.getElementById("menubox");
+
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+
+        // Outside click close menu
+        window.onclick = function(event) {
+            let menu = document.getElementById("menubox");
+            if (!event.target.matches('.menu-icon')) {
+                menu.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
 </html>
-
-
